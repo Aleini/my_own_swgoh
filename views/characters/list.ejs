@@ -1,0 +1,115 @@
+<%- include('../main_layout.ejs') %>
+
+<div class="content">
+    <h1 style="color: white; text-align: center;">
+        Mes persos
+    </h1>
+    <hr>
+
+    <div class="search-container filters-container">
+        <div class="selectors">
+            <label for="alignment">
+                <b>Choix alignement</b> <br>
+                <select name="alignment" id="alignment" class="filter">
+                    <option value="">--- Sélectionner une valeur ---</option>
+                    <option value="light-side">Côté Lumineux</option>
+                    <option value="dark-side">Côté Obscur</option>
+                    <option value="neutral">Neutre</option>
+                </select>
+            </label>
+            &nbsp;&nbsp;
+            <label for="factions">
+                <b>Factions</b> <br>
+                <select name="factions" id="factions" class="filter">
+                    <option value="">--- Sélectionner une valeur ---</option>
+                    <option value="501st">501st</option>
+                    <option value="Bad Batch">Bad Batch</option>
+                    <option value="Bounty Hunter">Chasseur de primes</option>
+                    <option value="Clone Trooper">Soldat Clone</option>
+                    <option value="Droid">Droïde</option>
+                    <option value="Jedi">Jedi</option>
+                    <option value="Unaligned Force User">Utilisateur de la Force non aligné</option>
+                    <option value="Sith">Sith</option>
+                    <option value="Rebel">Rebelle</option>
+                    <option value="Empire">Empire</option>
+                    <option value="Separatist">Séparatiste</option>
+                    <option value="Ewok">Ewok</option>
+                    <option value="First Order">Premier Ordre</option>
+                    <option value="Galactic Legend">Légende Galactique</option>
+                    <option value="Galactic Republic">Republique Galactique</option>
+                    <option value="Geonosian">Géonosien</option>
+                    <option value="Hutt Cartel">Cartel des Hutt</option>
+                    <option value="Imperial Remnant">Vestige de l'Empire</option>
+                    <option value="Imperial Trooper">Soldat de l'Empire</option>
+                    <option value="Inquisitorius">Inquisiteurs</option>
+                    <option value="Jawa">Jawa</option>
+                    <option value="Mandalorian">Mandalorien</option>
+                    <option value="Nightsister">Soeurs de la nuit</option>
+                    <option value="Old Republic">Ancienne République</option>
+                    <option value="Phoenix">Phoenix</option>
+                    <option value="Rebel Fighter">Combattant rebelle</option>
+                    <option value="Resistance">Resistance</option>
+                    <option value="Rogue One">Rogue One</option>
+                    <option value="Scoundrel">Vaurien</option>
+                    <option value="Sith Empire">Empire Sith</option>
+                    <option value="Smuggler">Contrebandier</option>
+                    <option value="Tusken">Tusken</option>
+                    <option value="Wookie">Wookie</option>
+                    <option value="Gungan">Gungan</option>
+                </select>
+            </label>
+            &nbsp;&nbsp;
+            <label for="role">
+                <b>Rôle</b> <br>
+                <select name="role" id="role" class="filter">
+                    <option value="">--- Sélectionner une valeur ---</option>
+                    <option value="Healer">Soigneur</option>
+                    <option value="Attacker">Attaquant</option>
+                    <option value="Leader">Leader</option>
+                    <option value="Support">Support</option>
+                    <option value="Tank">Tank</option>
+                </select>
+            </label>
+            &nbsp;&nbsp;
+            <label for="relic">
+                <b>Reliqué</b> <br>
+                <input type="checkbox" value="" name="relic" id="relic" class="checkbox-custom filter">
+            </label>
+        </div>
+        <button class="btn btn-primary" type="button" id="clean_filter" style="width: 10%;">
+            Effacer les filtres
+        </button>
+    </div>
+    <br>
+
+    <div id="container">
+        <ul class="list-unstyled d-flex flex-wrap justify-content-between">
+            <% playerUnits.forEach(unit => { %>
+                <div class="card mr-5 <%= unit.color_gear %>" style="width: 10%;">
+                    <span class="unit-name"><%= unit.name %></span>
+                    <img class="card-img-top" src="<%= unit.image %>" alt="Card image cap">
+                    <a href="/player/character_description?id_character=<%= unit.base_id %>" class="stretched-link"></a>
+                    <% unit.rarity_array.forEach(rarity => { %>
+                        <i id="<%= rarity.id %>" class="fas fa-star star-icon <%= rarity.color %>"></i>
+                    <% }); %>
+                    <span class="level level-<%= unit.color_gear %>">
+                        <% if (unit.gear_level == 13) { %>
+                            <%= unit.relic_tier %>
+                        <% } else { %>
+                            <%= unit.level %>
+                        <% }; %>
+                    </span>
+                    <% if (unit.zeta_number > 0) { %>
+                        <span class="zeta"></span>
+                        <span class="zeta-text"><%= unit.zeta_number %></span>
+                    <% }; %>
+                    <% if (unit.omicron_number > 0) { %>
+                        <span class="omicron"></span>
+                        <span class="omicron-text"><%= unit.omicron_number %></span>
+                    <% }; %>
+                </div>
+            <% }); %>
+        </ul>
+    </div>
+</div>
+<script src="/js/character.js"></script>

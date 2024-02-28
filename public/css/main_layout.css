@@ -1,0 +1,364 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* background-color: black; */
+    background-image: url('/img/dark_space_2.jpg');
+    background-size: 100%;
+    color: yellow;
+}
+
+label {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+textarea {
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+#profile_characters {
+    background-image: url('/img/coruscant.jpg');
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 0px;
+    border-radius: 150px;
+}
+
+#profile_ships {
+    background-image: url('/img/naboo.png');
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 0px;
+    border-radius: 150px;
+}
+
+#gac {
+    background-image: url('/img/hoth.png');
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 0px;
+    border-radius: 150px;
+}
+
+#my_profile {
+    background-image: url('/img/mustafar.webp');
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 0px;
+    border-radius: 150px;
+}
+
+#container {
+    color: black
+}
+
+#sidebar-img {
+    height: 25%;
+    background-image: url('/img/swgoh-logo.jpg');
+    background-position: center;
+}
+
+#img-character {
+    height: 400px;
+    margin-left: 35%;
+}
+
+#first-star {
+    /* left: 2px; */
+    left: -8px;
+    /* bottom: 40px; */
+    bottom: -45px;
+}
+
+#second-star {
+    /* left: 22px; */
+    left: 25px;
+    /* bottom: 8px; */
+    bottom: -45px;
+}
+
+#third-star {
+    /* left: 52px; */
+    left: 58px;
+    /* bottom: -15px; */
+    bottom: -45px;
+}
+
+#fourth-star {
+    left: 90px;
+    /* bottom: -25px; */
+    bottom: -45px;
+}
+
+#fifth-star {
+    left: 125px;
+    /* bottom: -15px; */
+    bottom: -45px;
+}
+
+#sixth-star {
+    left: 160px;
+    /* bottom: 8px; */
+    bottom: -45px;
+}
+
+#seventh-star {
+    /* left: 180px; */
+    left: 193px;
+    /* bottom: 40px; */
+    bottom: -45px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: black; */
+    background-image: url('/img/dark_space_2.jpg');
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar a {
+    color: yellow;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 16px;
+}
+
+.select2-container--default {
+    color: black;
+}
+
+.selectors {
+    display: flex;
+}
+
+.checkbox-custom {
+    transform: scale(1.5);
+}
+
+.checkbox-custom:hover {
+    cursor: pointer;
+}
+
+.card-img-top {
+    border-radius: 100px;
+    /* border-top-left-radius: 100px;
+    border-top-right-radius: 100px; */
+}
+
+.card {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    border-radius: 100px;
+    overflow: visible;
+    position: relative;
+    height: 185px;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.image-zoom {
+    transition: transform 0.3s ease;
+}
+
+.image-zoom:hover {
+    transform: scale(1.2); /* Vous pouvez ajuster la valeur selon l'effet de zoom souhaité */
+}
+
+.light-side {
+    background: repeating-linear-gradient(45deg, rgb(119, 245, 252), rgb(7, 64, 221), rgb(119, 245, 252));
+    /* border: solid 5px rgb(52, 111, 238); */
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-image: repeating-linear-gradient(45deg, rgb(119, 245, 252), rgb(7, 64, 221), rgb(119, 245, 252)) 0;
+}
+
+.dark-side {
+    background: repeating-linear-gradient(45deg, rgb(245, 77, 77), rgb(150, 24, 1), rgb(245, 77, 77));
+    /* border: solid 5px rgb(216, 23, 23); */
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-image: repeating-linear-gradient(45deg, rgb(245, 77, 77), rgb(150, 24, 1), rgb(245, 77, 77)) 0;
+}
+
+.high-gear {
+    background: repeating-linear-gradient(45deg, rgb(235, 235, 128), rgb(1162, 172, 26), rgb(235, 235, 128));
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-image: repeating-linear-gradient(45deg, rgb(235, 235, 128), rgb(1162, 172, 26), rgb(235, 235, 128)) 0;
+}
+
+.low-gear {
+    background: repeating-linear-gradient(45deg, rgb(136, 77, 230), rgb(68, 1, 99), rgb(136, 77, 230));
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-image: repeating-linear-gradient(45deg, rgb(136, 77, 230), rgb(68, 1, 99), rgb(136, 77, 230)) 0;
+}
+
+.search-container {
+    background-image: url('/img/blue-light-saber.jpg');
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white
+}
+
+.star-wars-container {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.star-wars-text {
+    font-size: 2em;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    /* animation: scroll 10s linear infinite; */
+}
+
+.description-label {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.star-icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+
+.gold {
+    color: rgb(183, 156, 4);
+}
+
+.level {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+.level-dark-side {
+    background: repeating-linear-gradient(45deg, rgb(245, 77, 77), rgb(150, 24, 1), rgb(245, 77, 77));
+    border: solid 3px darkred;
+}
+
+.level-light-side {
+    background: repeating-linear-gradient(45deg, rgb(119, 245, 252), rgb(7, 64, 221), rgb(119, 245, 252));
+    border: solid 3px darkblue;
+}
+
+.level-high-gear {
+    background: repeating-linear-gradient(45deg, rgb(235, 235, 128), rgb(162, 172, 26), rgb(235, 235, 128));
+    border: solid 3px rgb(172, 137, 49);
+}
+
+.level-low-gear {
+    background: repeating-linear-gradient(45deg, rgb(136, 77, 230), rgb(68, 1, 99), rgb(136, 77, 230));
+    border: solid 3px darkmagenta;
+}
+
+.white {
+    color: rgb(223, 214, 214);
+}
+
+.unit-name {
+    position: absolute;
+    bottom: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(183, 156, 4);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+}
+
+.zeta {
+    position: absolute;
+    top: 70%;
+    right: 72%;
+    height: 60px;
+    width: 60px;
+    background-image: url('/img/zeta.webp');
+}
+
+.zeta-text {
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    top: 79%;
+    right: 86%;
+    font-weight: bold;
+}
+
+.omicron {
+    position: absolute;
+    top: 70%;
+    right: -5%;
+    height: 60px;
+    width: 60px;
+    background-image: url('/img/omicron.webp');
+}
+
+.omicron-text {
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    top: 78%;
+    right: 8%;
+    font-weight: bold;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

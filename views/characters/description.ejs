@@ -1,0 +1,18 @@
+<%- include('../main_layout.ejs') %>
+
+<div class="content">
+    <img id="img-character" src="<%= unit.image %>" alt="image_<%=unit.name%>"><br>
+    <h5 style="margin-left: 42%;"><%= unit.name %></h5><br>
+    <label class="description-label">Description</label><br>
+    <%= unit.description %><br><br>
+    <label class="description-label">Catégories</label>
+    <ul>
+        <% unit.categories.forEach(category => { %>
+            <li>
+                <%= category %>
+            </li>
+        <% }); %>
+    </ul><br>
+    <label class="description-label">Puissance</label><br>
+    <%= unit.power %>
+</div>
